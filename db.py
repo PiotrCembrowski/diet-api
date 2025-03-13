@@ -90,4 +90,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS products
                     protein_quality INTEGER,
                     fat_quality INTEGER,
                     carb_quality INTEGER,       
-                    )''')
+                )''')
+
+conn.commit()
+conn.close()

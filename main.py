@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+import db
+
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
