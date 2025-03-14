@@ -22,8 +22,11 @@ def create_product():
     return {"message": "Product has been created successfully!"}
 
 
-# @app.get("/")
-# def read_root():
-#     users = cursor.fetchall()
-#     conn.close()
-#     return {"users": users}
+@app.get("/products")
+def read_products():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM products")
+    products = cursor.fetchall()
+    conn.close()
+    return {"products": products}
