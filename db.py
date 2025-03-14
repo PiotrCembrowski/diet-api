@@ -39,7 +39,6 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS products
                     omega9 INTEGER,
                     cholesterol INTEGER,
                     phytosterol INTEGER,
-                    sodium INTEGER,
                     allulose INTEGER,
                     fructose INTEGER,
                     glucose INTEGER,
@@ -89,7 +88,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS products
                     zinc INTEGER,
                     protein_quality INTEGER,
                     fat_quality INTEGER,
-                    carb_quality INTEGER,       
+                    carb_quality INTEGER
                 )''')
 
 conn.commit()
